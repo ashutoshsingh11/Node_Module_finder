@@ -1,0 +1,38 @@
+{
+  "name": "node-module-finder",
+  "version": "1.0.0",
+  "description": "Find and delete node_modules folders",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build && electron-builder",
+    "vite": "vite",
+    "electron": "electron .",
+    "postinstall": "node node_modules/electron/install.js"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.7",
+    "wait-on": "^8.0.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "trash": "^9.0.0"
+  },
+  "build": {
+    "appId": "com.dev.node-finder",
+    "files": [
+      "dist/**",
+      "main.js",
+      "preload.js"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  }
+}
