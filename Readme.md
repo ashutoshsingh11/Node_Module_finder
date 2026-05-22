@@ -2,7 +2,7 @@
 
 A desktop application built with **Electron + React + Vite** to scan, audit, and reclaim disk space consumed by `node_modules` folders across your projects , space consumed by all the `node_modules` is displayed on the top right corner post scan and calculation .
 
----
+## ![alt text](image.png)
 
 ## Table of Contents
 
